@@ -42,6 +42,7 @@ var map = L.map('map', {
 var sw = map.unproject([0, mapheight], 4);  // Level 4, because this is the level where meters-per-pixel is exactly 1
 var ne = map.unproject([mapwidth, 0], 4);
 var layerbounds = new L.LatLngBounds(sw, ne);
+map.setMaxBounds(layerbounds);
 
 // Get initial zoom level
 
