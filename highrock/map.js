@@ -7,6 +7,8 @@ var mapheight = 4096;
 var mapwidth = 4096;
 var mapMinZoom = 1;
 var mapMaxZoom = 4;
+var apiRoot = "http://mcrpc-server.petervertesi.com";
+var mapName = "highrock";
 
 /* Configure custom CRS */
 
@@ -85,10 +87,11 @@ dragMarker.on("dragend", (e) => {
 })
 
 // GeoJSON
-var geoJsonLayerReference = L.geoJSON();
-var apiUrl = "http://mcrpc-server-pr-12.herokuapp.com/api/geojson";
 
-var queryUrl = `${apiUrl}?map=highrock`;
+var geoJsonLayerReference = L.geoJSON();
+var apiUrl = `${apiRoot}/api/geojson`;
+
+var queryUrl = `${apiUrl}?map=${mapName}`;
 httpGetAsync(queryUrl, (response) => {
 	var geoJsonData = JSON.parse(response).results;
 	var geoJsonLayer = L.geoJSON(false, {
