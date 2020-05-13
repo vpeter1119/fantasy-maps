@@ -85,7 +85,7 @@ dragMarker.on("dragend", (e) => {
 
 // GeoJSON
 var geoJsonLayerReference = L.geoJSON();
-var apiUrl = "http://localhost:3000/api/geojson";
+var apiUrl = "http://mcrpc-server-pr-12.herokuapp.com/api/geojson";
 
 var queryUrl = `${apiUrl}?map=highrock`;
 httpGetAsync(queryUrl, (response) => {
