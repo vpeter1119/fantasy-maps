@@ -4,5 +4,6 @@
 
 /.vs
 /assets
-/highrock/tiles
-/highrock/scripts/leaflet
+*/tiles
+*/backup
+*/scripts/leaflet
