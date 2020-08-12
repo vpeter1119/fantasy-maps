@@ -82,7 +82,7 @@ map.on("zoomend", () => {
 
 var testPopup = L.popup();
 map.on('contextmenu', (e) => {
-	var coordinates = [e.latlng.lng,-e.latlng.lat];
+	var coordinates = [Math.floor(e.latlng.lng),Math.floor(-e.latlng.lat)];
 	testPopup.setLatLng(e.latlng);
 	testPopup.setContent(`<h3>Add Marker<h3><h4>Current coordinates: ${coordinates}<h4><p><form onSubmit="return false"><label for="name">Name:</label><br><input type="text" id="name" name="name"><br><label for="url">Url:</label><br><input type="text" id="url" name="url"><br><label for="desc">Description:</label><br><textarea type="text" id="desc" rows="4" style="width: 96%;" name="desc"></textarea><input hidden type="text" id="coords" value="${coordinates}"><br><br><button type="submit" onClick="submitGeoJsonData(); dragMarker.closePopup();">Save</button></form></p>`);
 	testPopup.openOn(map);
