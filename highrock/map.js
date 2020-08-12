@@ -155,7 +155,7 @@ function submitGeoJsonData() {
 			coordinates: [parseInt(coordinates[0]),parseInt(coordinates[1])]
 		},
 		properties: {
-			map: "highrock",
+			map: mapName,
 			name: document.getElementById("name").value,
 			url: document.getElementById("url").value,
 			desc: `<p>${document.getElementById("desc").value}</p>`,
