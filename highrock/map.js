@@ -7,7 +7,7 @@ var mapheight = 4096;
 var mapwidth = 4096;
 var mapMinZoom = 1;
 var mapMaxZoom = 4;
-var apiRoot = "http://mcrpc-server.petervertesi.com";
+var apiRoot = "https://mcrpc-server.petervertesi.com";
 var mapName = "highrock";
 
 /* Configure custom CRS */
